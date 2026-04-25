@@ -17,7 +17,7 @@ def pregunta_02():
     conteo = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             letra = parts[0]
             conteo[letra] = conteo.get(letra, 0) + 1
 

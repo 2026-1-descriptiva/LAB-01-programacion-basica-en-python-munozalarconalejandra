@@ -18,7 +18,7 @@ def pregunta_03():
     suma = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             letra = parts[0]
             valor = int(parts[1])
             suma[letra] = suma.get(letra, 0) + valor

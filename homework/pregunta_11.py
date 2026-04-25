@@ -18,12 +18,11 @@ def pregunta_11():
     resultado = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             valor = int(parts[1])
-            col4 = parts[3].split("|")
+            col4 = parts[3].split(",")
 
-            for item in col4:
-                letra = item[0]
+            for letra in col4:
                 resultado[letra] = resultado.get(letra, 0) + valor
 
     return dict(sorted(resultado.items()))

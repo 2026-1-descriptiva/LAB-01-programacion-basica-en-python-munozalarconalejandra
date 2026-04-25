@@ -28,7 +28,7 @@ def pregunta_07():
     resultado = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             letra = parts[0]
             valor = int(parts[1])
 

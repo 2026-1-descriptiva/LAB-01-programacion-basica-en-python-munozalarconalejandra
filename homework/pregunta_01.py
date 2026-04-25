@@ -17,7 +17,7 @@ def pregunta_01():
     total = 0
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             try:
                 total += int(parts[1])
             except:

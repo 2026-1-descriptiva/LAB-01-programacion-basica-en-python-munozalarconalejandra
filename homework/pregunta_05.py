@@ -18,7 +18,7 @@ def pregunta_05():
     valores = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             letra = parts[0]
             numero = int(parts[1])
 

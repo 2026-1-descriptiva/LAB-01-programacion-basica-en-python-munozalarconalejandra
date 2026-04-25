@@ -29,7 +29,7 @@ def pregunta_04():
     conteo = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             fecha = parts[2]
             mes = fecha.split("-")[1]
             conteo[mes] = conteo.get(mes, 0) + 1

@@ -29,7 +29,7 @@ def pregunta_06():
     valores = {}
     with open('files/input/data.csv', 'r') as file:
         for line in file:
-            parts = line.strip().split(",")
+            parts = line.strip().split("\t")
             dicc = parts[4].split(",")
 
             for item in dicc:
