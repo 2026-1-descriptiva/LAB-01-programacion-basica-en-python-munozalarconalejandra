@@ -14,5 +14,16 @@ def pregunta_11():
     Rta/
     {'a': 122, 'b': 49, 'c': 91, 'd': 73, 'e': 86, 'f': 134, 'g': 35}
 
-
     """
+    resultado = {}
+    with open('files/input/data.csv', 'r') as file:
+        for line in file:
+            parts = line.strip().split(",")
+            valor = int(parts[1])
+            col4 = parts[3].split("|")
+
+            for item in col4:
+                letra = item[0]
+                resultado[letra] = resultado.get(letra, 0) + valor
+
+    return dict(sorted(resultado.items()))

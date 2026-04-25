@@ -24,3 +24,14 @@ def pregunta_09():
      'jjj': 18}}
 
     """
+    conteo = {}
+    with open('files/input/data.csv', 'r') as file:
+        for line in file:
+            parts = line.strip().split(",")
+            dicc = parts[4].split(",")
+
+            for item in dicc:
+                clave = item.split(":")[0]
+                conteo[clave] = conteo.get(clave, 0) + 1
+
+    return conteo
